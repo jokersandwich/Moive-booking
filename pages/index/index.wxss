@@ -41,9 +41,9 @@
 }
 
 .date {
-  width: 50rpx;
-  height: 50rpx;
-  line-height: 50rpx;
+  width: 56rpx;
+  height: 56rpx;
+  line-height: 56rpx;
   text-align: center;
   font-size: 24rpx;
 }
@@ -62,6 +62,10 @@
 .theater-header {
   display: flex;
   justify-content: space-between;
+}
+
+.arrow {
+  padding: 0 16rpx;
 }
 
 .theater-name {

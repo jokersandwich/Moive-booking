@@ -1,6 +1,7 @@
 <!--index.wxml-->
 
 <view class='container'>
+  <!-- 标签栏 -->
   <view class='genres-list'>
     <scroll-view class='scroll-view' scroll-x>
       <block wx:for='{{ genres }}' wx:key='*this'>
@@ -8,24 +9,25 @@
       </block>
     </scroll-view>
   </view>
+  <!-- 电影列表 -->
   <block wx:for='{{ movie_list }}' wx:key='{{ item.movie_title }}'>
     <movie-card movie_src='{{ item.movie_src }}' movie_title='{{ item.movie_title }}' movie_genres='{{ item.movie_genres }}' movie_average='{{ item.movie_average }}' movie_durations='{{ item.movie_durations }}'>
       <split-line></split-line>
       <view class='wrap'>
         <view class='data-list'>
-          <view wx:for='{{ date_list }}' wx:key='{{ item.date }}'>
+          <view wx:for='{{ date_list }}' wx:key='{{ item.date }}' bindtap='bindDateTap' data-id='{{ item.date }}'>
             <view class='week'>{{ item.week }}</view>
-            <view class='date {{ item.date == select_date ? "date-active" : "" }}' bindtap='bindDateTap' data-id='{{ item.date }}'>{{ item.date }}</view>
+            <view class='date {{ item.date == select_date ? "date-active" : "" }}'>{{ item.date }}</view>
           </view>
         </view>
         <view class='theater'>
           <view class='theater-header'>
-            <text bindtap='bindBackTap'>←</text>
+            <text class='arrow' bindtap='bindBackTap'>←</text>
             <text class='theater-name'>{{ theater_list[select_theater].title }}</text>
-            <text bindtap='bindForwardTap'>→</text>
+            <text class='arrow' bindtap='bindForwardTap'>→</text>
           </view>
           <view class='time-list'>
-            <view class='time {{ item == select_time ? "time-active" : "" }}' wx:for='{{ theater_list[select_theater].time_list }}' wx:key='{{ *this }}' bindtap='bindTimeTap' data-id='{{ item }}'>{{ item }}</view>
+            <view class='time {{ item == select_time ? "time-active" : "" }}' wx:for='{{ theater_list[select_theater].time_list }}' wx:key='{{ item.title }}' bindtap='bindTimeTap' data-id='{{ item }}'>{{ item }}</view>
           </view>
         </view>
       </view>
