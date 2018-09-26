@@ -1,13 +1,34 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+
+<view class='container'>
+  <view class='genres-list'>
+    <scroll-view class='scroll-view' scroll-x>
+      <block wx:for='{{ genres }}' wx:key='*this'>
+        <button class='genres-list-btn {{ item == select_genres ? "genres-list-btn-active" : "" }}' bindtap='bindGenreTap' data-id='{{ item }}'>{{item}}</button>
+      </block>
+    </scroll-view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <block wx:for='{{ movie_list }}' wx:key='{{ item.movie_title }}'>
+    <movie-card movie_src='{{ item.movie_src }}' movie_title='{{ item.movie_title }}' movie_genres='{{ item.movie_genres }}' movie_average='{{ item.movie_average }}' movie_durations='{{ item.movie_durations }}'>
+      <split-line></split-line>
+      <view class='wrap'>
+        <view class='data-list'>
+          <view wx:for='{{ date_list }}' wx:key='{{ item.date }}'>
+            <view class='week'>{{ item.week }}</view>
+            <view class='date {{ item.date == select_date ? "date-active" : "" }}' bindtap='bindDateTap' data-id='{{ item.date }}'>{{ item.date }}</view>
+          </view>
+        </view>
+        <view class='theater'>
+          <view class='theater-header'>
+            <text bindtap='bindBackTap'>←</text>
+            <text class='theater-name'>{{ theater_list[select_theater].title }}</text>
+            <text bindtap='bindForwardTap'>→</text>
+          </view>
+          <view class='time-list'>
+            <view class='time {{ item == select_time ? "time-active" : "" }}' wx:for='{{ theater_list[select_theater].time_list }}' wx:key='{{ *this }}' bindtap='bindTimeTap' data-id='{{ item }}'>{{ item }}</view>
+          </view>
+        </view>
+      </view>
+    </movie-card>
+  </block>
 </view>

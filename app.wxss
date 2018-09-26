@@ -1,10 +1,14 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+
+button::after{
+  border: none;
+}
+
+view {
   box-sizing: border-box;
-} 
+}
+
+.scroll-view {
+  width: 100%;
+  white-space:nowrap;
+}

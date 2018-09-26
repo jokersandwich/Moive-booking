@@ -1,0 +1,18 @@
+<!--component/split-line/split-line.wxml-->
+<view class='split-line'>
+  <view class='dot-lg' style='border-radius: 0 40rpx 40rpx 0;'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-sm'></view>
+  <view class='dot-lg' style='border-radius: 40rpx 0 0 40rpx;'></view>
+</view>

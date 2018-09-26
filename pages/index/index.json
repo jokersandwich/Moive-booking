@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#fefefe",
+  "usingComponents": {
+    "movie-card": "/component/movie-card/movie-card",
+    "split-line": "/component/split-line/split-line"
+  }
+}

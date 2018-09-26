@@ -1,0 +1,21 @@
+/* component/split-line/split-line.wxss */
+
+.split-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dot-sm {
+  background: #f3f3f3;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+}
+
+.dot-lg {
+  background: #f3f3f3;
+  width: 20rpx;
+  height: 40rpx;
+}

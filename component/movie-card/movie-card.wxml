@@ -1,0 +1,16 @@
+<!--component/movie-card/movie-card.wxml-->
+<view class='movie-card'>
+  <view class='movie-card-hd' bindtap='bindCardTap'>
+    <image mode='aspectFill' class='movie-img' style='width: 210rpx; height: 240rpx;' src='{{movie_src}}'></image>
+    <view class='movie-info'>
+      <view class='movie-title'>{{movie_title}}</view>
+      <view class='moive-genres'>{{movie_genres}} · {{ movie_durations }}</view>
+      <view class='movie-rating'>豆瓣 <text class='movie-rating-average'>{{movie_average}}</text></view>
+    </view>
+  </view>
+  <view class='movie-card-bd'>
+    <view style='display: {{ show ? "block" : "none" }}'>
+      <slot></slot>
+    </view>
+  </view>
+</view>

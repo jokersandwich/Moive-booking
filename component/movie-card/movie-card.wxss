@@ -1,0 +1,48 @@
+/* component/movie-card/movie-card.wxss */
+
+.movie-card {
+  position: relative;
+  margin: 0 32rpx 100rpx;
+  box-shadow: 0 8rpx 64rpx 0 rgba(0,0,0,0.1);
+  border-radius: 20rpx;
+}
+
+.movie-card-hd {
+  padding: 32rpx 24rpx;
+  height: 220rpx;
+}
+
+.movie-img {
+  position: absolute;
+  top: -56rpx;
+  border-radius: 20rpx;
+}
+
+.movie-info {
+  margin-left: 250rpx;
+}
+
+.movie-title {
+  font-size: 35rpx;
+}
+
+.moive-genres {
+  font-size: 23rpx;
+  color: #aaa;
+  line-height: 2;
+}
+
+.devide-dot {
+  padding: 0 16rpx;
+}
+
+.movie-rating {
+  font-size: 23rpx;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.movie-rating-average {
+  font-size: 26rpx;
+  color: #333;
+}
