@@ -22,14 +22,17 @@
         </view>
         <view class='theater'>
           <view class='theater-header'>
-            <text class='arrow' bindtap='bindBackTap'>←</text>
+            <i class='icon icon-left' bindtap='bindBackTap'></i>
             <text class='theater-name'>{{ theater_list[select_theater].title }}</text>
-            <text class='arrow' bindtap='bindForwardTap'>→</text>
+            <i class='icon icon-right' bindtap='bindForwardTap'></i>
           </view>
           <view class='time-list'>
             <view class='time {{ item == select_time ? "time-active" : "" }}' wx:for='{{ theater_list[select_theater].time_list }}' wx:key='{{ item.title }}' bindtap='bindTimeTap' data-id='{{ item }}'>{{ item }}</view>
           </view>
         </view>
+      </view>
+      <view class='booking'>
+        <i class='icon icon-clapper-board' bindtap='bindBookingTap'></i>
       </view>
     </movie-card>
   </block>

@@ -106,5 +106,12 @@ Page({
     this.setData({
       select_time: e.currentTarget.dataset.id
     })
+  },
+
+  // 预定
+  bindBookingTap: function(e) {
+    wx.navigateTo({
+      url: '/pages/seat/seat',
+    })
   }
 })

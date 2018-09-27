@@ -1,5 +1,7 @@
 /**app.wxss**/
 
+@import "style/icon.wxss";
+
 button::after{
   border: none;
 }
