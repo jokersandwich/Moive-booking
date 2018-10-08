@@ -1,2 +1,24 @@
 <!--pages/seat/seat.wxml-->
-<text>pages/seat/seat.wxml</text>
+<view class='container'>
+  <view class='header' style='background-image: url(https://img3.doubanio.com/view/photo/m_ratio_poster/public/p480747492.webp);'>
+    <view class='title'>肖申克的救赎</view>
+    <view class='edit'>
+      <i class='icon icon-write2'></i>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='info'>
+      <view class='theater'>IMAX - 万达影城</view>
+      <view class='time'>2018年6月25日 - 01:20 pm</view>
+    </view>
+    <view class='cutline'>
+      <view class='cutline-item'><view class='dot dot-blue'></view>已售座位</view>
+      <view class='cutline-item'><view class='dot dot-gray'></view>可选座位</view>
+      <view class='cutline-item'><view class='dot dot-orange'></view>选择座位</view>
+    </view>
+    <view class='screen'>
+      <view class='screen-shape'></view>
+      <view class='screen-text'>屏幕</view>
+    </view>
+  </view>
+</view>

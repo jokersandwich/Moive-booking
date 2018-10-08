@@ -21,13 +21,13 @@ Page({
     select_date: '24',
     theater_list: [
       {
-        title: '万达影城',
+        title: 'IMAX - 万达影城',
         time_list: ['10:30 am', '12:00 am', '01:20 pm', '02:45 pm', '03:15 pm', '05:10 pm']
       }, {
-        title: '百老汇影城',
+        title: '杜比全景声 - 百老汇影城',
         time_list: ['9:30 am', '11:00 am', '00:20 pm', '01:45 pm', '02:15 pm', '04:10 pm']
       }, {
-        title: 'UME国际影城',
+        title: 'LUXE - UME国际影城',
         time_list: ['8:30 am', '10:20 am', '11:50 pm', '00:45 pm', '01:15 pm', '03:10 pm']
       }
     ],
