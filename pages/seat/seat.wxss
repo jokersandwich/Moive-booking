@@ -59,30 +59,38 @@
   align-items: center;
 }
 
-.dot {
+.cutline-item .dot {
   margin-right: 24rpx;
+}
+
+.dot {
   display: inline-block;
-  width: 24rpx;
-  height: 24rpx;
+  width: 22rpx;
+  height: 22rpx;
   background: #7776f3;
   border-radius: 50%;
 }
 
-.dot-blue {
-  background-color: #1311a3;
+.dot-gray {
+  width: 18rpx;
+  height: 18rpx;
 }
 
-.dot-gray {
-  width: 20rpx;
-  height: 20rpx;
+.dot-blue {
+  background-color: #2725bb;
 }
 
 .dot-orange {
   background-color: #f8a311;
 }
 
+.dot-none {
+  width: 0;
+  height: 0;
+}
+
 .screen {
-  margin: 64rpx 0;
+  margin: 64rpx 0 48rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +101,7 @@
   width: 80%;
   height: 10rpx;
   background: #fff;
-  border-radius: 5rpx;
+  border-radius: 30%;
   box-shadow: 0 8rpx 32rpx 0 rgba(255,255,255,0.8);
 }
 
@@ -101,4 +109,34 @@
   color: #7776f3;
   font-size: 24rpx;
   letter-spacing: 16rpx;
+}
+
+.row {
+  color: #7776f3;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.letter-left {
+  padding: 0 0 0 32rpx;
+  float: left;
+}
+
+.letter-right {
+  padding: 0 32rpx 0 0;
+  float: right;
+}
+
+.seat-row {
+  display: inline-block;
+}
+
+.dot-area {
+  width: 42rpx;
+  height: 42rpx;
+  display: inline-block;
 }

@@ -20,5 +20,27 @@
       <view class='screen-shape'></view>
       <view class='screen-text'>屏幕</view>
     </view>
+    <view class='seats'>
+      <view class='row' wx:for='{{ seats }}' wx:key='{{ item.letter }}'>
+        <view class='letter letter-left'>{{ item.letter }}</view>
+        <view class='seat-row'>
+          <block wx:for='{{item.seats}}' wx:key='{{ item.id }}'>
+            <view class='dot-area' wx:if='{{ (selectedSeats[item.id] == null) && (item.display == true) }}' bindtap='bindDotTap' data-id='{{ item.id }}'>
+              <view class='dot dot-gray'></view>
+            </view>
+            <view class='dot-area' wx:elif='{{ (selectedSeats[item.id] == "selected") && (item.display == true) }}' bindtap='bindDotTap' data-id='{{ item.id }}'>
+              <view class='dot dot-orange'></view>
+            </view>
+            <view class='dot-area' wx:elif='{{ (selectedSeats[item.id] == "occupied") && (item.display == true) }}'>
+              <view class='dot dot-blue'></view>
+            </view>
+            <view class='dot-area' wx:else>
+              <view class='dot dot-none'></view>
+            </view>
+          </block>
+        </view>
+        <view class='letter letter-right'>{{ item.letter }}</view>
+      </view>
+    </view>
   </view>
 </view>
