@@ -86,7 +86,8 @@ Page({
     }
 
     this.setData({
-      select_theater: select_theater
+      select_theater: select_theater,
+      select_time: this.data.theater_list[select_theater].time_list[0]
     })
     console.log(select_theater)
   },
@@ -102,7 +103,8 @@ Page({
     }
 
     this.setData({
-      select_theater: select_theater
+      select_theater: select_theater,
+      select_time: this.data.theater_list[select_theater].time_list[0]
     })
     console.log(select_theater)
   },
