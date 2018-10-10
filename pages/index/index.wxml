@@ -15,9 +15,9 @@
       <split-line></split-line>
       <view class='wrap'>
         <view class='data-list'>
-          <view wx:for='{{ date_list }}' wx:key='{{ item.date }}' bindtap='bindDateTap' data-id='{{ item.date }}'>
+          <view wx:for='{{ date_list }}' wx:key='{{ item.date }}' bindtap='bindDateTap' data-id='{{ index }}'>
             <view class='week'>{{ item.week }}</view>
-            <view class='date {{ item.date == select_date ? "date-active" : "" }}'>{{ item.date }}</view>
+            <view class='date {{ item.date == select_date.date ? "date-active" : "" }}'>{{ item.date }}</view>
           </view>
         </view>
         <view class='theater'>
@@ -32,7 +32,7 @@
         </view>
       </view>
       <view class='booking'>
-        <i class='icon icon-clapper-board' bindtap='bindBookingTap'></i>
+        <i class='icon icon-clapper-board' bindtap='bindBookingTap' data-id='{{ index }}'></i>
       </view>
     </movie-card>
   </block>

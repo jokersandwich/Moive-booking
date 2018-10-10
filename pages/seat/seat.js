@@ -8,23 +8,47 @@ Page({
    */
   data: {
     seats: [],
-    selectedSeats: { A11: 'occupied', B4: 'occupied', B11: 'occupied', C10: 'occupied', D1: 'occupied', E1: 'occupied', E2: 'occupied', E7: 'occupied', F5: 'occupied', F12: 'occupied', H11: 'occupied', H12: 'occupied', I1: 'occupied', I3: 'occupied', I4: 'occupied', I5: 'occupied', I11: 'occupied', I12: 'occupied',  D3: 'selected', D4: 'selected' }
+    selected_seats: { A11: 'occupied', B4: 'occupied', B11: 'occupied', C10: 'occupied', D1: 'occupied', E1: 'occupied', E2: 'occupied', E7: 'occupied', F5: 'occupied', F12: 'occupied', H11: 'occupied', H12: 'occupied', I1: 'occupied', I3: 'occupied', I4: 'occupied', I5: 'occupied', I11: 'occupied', I12: 'occupied',  D3: 'selected', D4: 'selected' },
+    movie_data: {},
+    booking_data: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+
+    wx.getStorage({
+      key: 'movie_data',
+      success: function(res) {
+        res.data.movie_src = res.data.movie_src.replace(/s_ratio/, "m_ratio")
+        console.log(res.data)
+        that.setData({
+          movie_data: res.data
+        })
+      },
+    })
+
+    wx.getStorage({
+      key: 'booking_data',
+      success: function(res) {
+        that.setData({
+          booking_data: res.data
+        })
+      },
+    })
+
     this.setData({
       seats: mockdata.seats
     })
-    console.log(this.data)
   },
 
   bindDotTap: function(e) {
     var id = e.currentTarget.dataset.id
-    var prop = 'selectedSeats.' + id
-    if (this.data.selectedSeats[id] != 'selected') {
+    var prop = 'selected_seats.' + id
+
+    if (this.data.selected_seats[id] != 'selected') {
       this.setData({
         [prop]: 'selected'
       })
@@ -34,7 +58,8 @@ Page({
         [prop]: null
       })
     }
-    console.log(this.data.selectedSeats)
+    
+    console.log(this.data.selected_seats)
   },
 
   /**

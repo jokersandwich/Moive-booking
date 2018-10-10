@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 24vh;
-  background: #eee no-repeat fixed top;
+  background: #eee no-repeat top;
   background-size: 100%;
 }
 

@@ -1,15 +1,15 @@
 <!--pages/seat/seat.wxml-->
 <view class='container'>
-  <view class='header' style='background-image: url(https://img3.doubanio.com/view/photo/m_ratio_poster/public/p480747492.webp);'>
-    <view class='title'>肖申克的救赎</view>
+  <view class='header' style='background-image: url({{ movie_data.movie_src }});'>
+    <view class='title'>{{ movie_data.movie_title }}</view>
     <view class='edit'>
       <i class='icon icon-write2'></i>
     </view>
   </view>
   <view class='main'>
     <view class='info'>
-      <view class='theater'>IMAX - 万达影城</view>
-      <view class='time'>2018年6月25日 - 01:20 pm</view>
+      <view class='theater'>{{ booking_data.select_theater.title }}</view>
+      <view class='time'>{{ booking_data.select_date.year }}年{{ booking_data.select_date.month }}月{{ booking_data.select_date.date }}日 - {{ booking_data.select_time }}</view>
     </view>
     <view class='cutline'>
       <view class='cutline-item'><view class='dot dot-blue'></view>已售座位</view>
@@ -25,13 +25,13 @@
         <view class='letter letter-left'>{{ item.letter }}</view>
         <view class='seat-row'>
           <block wx:for='{{item.seats}}' wx:key='{{ item.id }}'>
-            <view class='dot-area' wx:if='{{ (selectedSeats[item.id] == null) && (item.display == true) }}' bindtap='bindDotTap' data-id='{{ item.id }}'>
+            <view class='dot-area' wx:if='{{ (selected_seats[item.id] == null) && (item.display == true) }}' bindtap='bindDotTap' data-id='{{ item.id }}'>
               <view class='dot dot-gray'></view>
             </view>
-            <view class='dot-area' wx:elif='{{ (selectedSeats[item.id] == "selected") && (item.display == true) }}' bindtap='bindDotTap' data-id='{{ item.id }}'>
+            <view class='dot-area' wx:elif='{{ (selected_seats[item.id] == "selected") && (item.display == true) }}' bindtap='bindDotTap' data-id='{{ item.id }}'>
               <view class='dot dot-orange'></view>
             </view>
-            <view class='dot-area' wx:elif='{{ (selectedSeats[item.id] == "occupied") && (item.display == true) }}'>
+            <view class='dot-area' wx:elif='{{ (selected_seats[item.id] == "occupied") && (item.display == true) }}'>
               <view class='dot dot-blue'></view>
             </view>
             <view class='dot-area' wx:else>
