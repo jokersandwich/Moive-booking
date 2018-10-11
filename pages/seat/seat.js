@@ -44,6 +44,7 @@ Page({
     })
   },
 
+  // 选择座位
   bindDotTap: function(e) {
     var id = e.currentTarget.dataset.id
     var prop = 'selected_seats.' + id
@@ -60,6 +61,12 @@ Page({
     }
     
     console.log(this.data.selected_seats)
+  },
+
+  bindFooterTap: function(e) {
+    wx.navigateTo({
+      url: '/pages/check/check',
+    })
   },
 
   /**

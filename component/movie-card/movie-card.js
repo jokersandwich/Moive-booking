@@ -8,14 +8,14 @@ Component({
     movie_title: String,
     movie_genres: String,
     movie_durations: String,
-    movie_average: Number
+    movie_average: Number,
+    show: Boolean
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    show: false
   },
 
   /**

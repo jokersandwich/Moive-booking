@@ -140,3 +140,22 @@
   height: 42rpx;
   display: inline-block;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 108rpx;
+  width: 100%;
+  background: #fff;
+  line-height: 108rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.icon-right {
+  position: absolute;
+  right: 80rpx;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #3d3bee;
+}

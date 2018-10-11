@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/seat/seat",
+    "pages/check/check",
     "component/movie-card/movie-card",
     "component/split-line/split-line"
   ],

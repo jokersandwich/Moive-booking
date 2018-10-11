@@ -1,0 +1,61 @@
+<!--pages/check/check.wxml-->
+<view class='container'>
+  <view class='wrap'>
+    <movie-card movie_src='{{ movie_data.movie_src }}' movie_title='{{ movie_data.movie_title }}' movie_genres='{{ movie_data.movie_genres }}' movie_average='{{ movie_data.movie_average }}' movie_durations='{{ movie_data.movie_durations }}' show='{{ true }}'>
+      <view class='info'>
+        <view class='info-row'>
+          <view class='info-label'>电影院</view>
+          <view class='info-text'>万达</view>
+        </view>
+        <view class='info-row'>
+          <view class='col col-4'>
+            <view class='info-label'>日期</view>
+            <view class='info-text'>6月25日（周一）</view>
+          </view>
+          <view class='col col-3'>
+            <view class='info-label'>开始时间</view>
+            <view class='info-text'>01:20 pm</view>
+          </view>
+          <view class='col col-3'>
+            <view class='info-label'>结束时间</view>
+            <view class='info-text'>03:20 pm</view>
+          </view>
+        </view>
+        <view class='info-row'>
+          <view class='col col-4'>
+            <view class='info-label'>影厅</view>
+            <view class='info-text'>03</view>
+          </view>
+          <view class='col col-3'>
+            <view class='info-label'>排数</view>
+            <view class='info-text'>D</view>
+          </view>
+          <view class='col col-3'>
+            <view class='info-label'>座号</view>
+            <view class='info-text'>D4, D5, D6</view>
+          </view>
+        </view>
+      </view>
+      <split-line></split-line>
+      <view class='info' style='margin-top: 32rpx;'>
+        <view class='info-row'>
+          <view class='col col-7'>
+            <view class='info-label'>票号</view>
+            <view class='info-text'>RPV 4930 AYUSH 6721</view>
+          </view>
+          <view class='col col-3'>
+            <view class='info-label'>价格</view>
+            <view class='info-text'>￥35.00</view>
+          </view>
+        </view>
+      </view>
+      <view class='bar-code'>
+        <image src='/image/bar-code.png' style='height: 84rpx;' mode='aspectFit'></image>
+      </view>
+    </movie-card>
+  </view>
+  <view class='footer' bindtap='bindFooterTap'>
+    <i class='icon icon-finger-print'></i>
+    <text>支付账单</text>
+  </view>
+</view>
