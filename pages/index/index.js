@@ -10,6 +10,7 @@ Page({
     select_genres: '全部',
     movie_list: [],
     complete_list: [],
+    start: 0,
     date_list: [
       { week: '日', date: '24', month: '6', year: '2018' },
       { week: '一', date: '25', month: '6', year: '2018' },
@@ -37,15 +38,43 @@ Page({
   },
 
   onLoad() {
+    var start = this.data.start
+    this.getData(start)
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    var start = this.data.start
+    if (this.data.select_genres == '全部') {
+      if (start < 240) {
+        start += 10
+        this.getData(start)
+      } else {
+        wx.showToast({
+          title: '已加载所有电影',
+        })
+      }
+    } else {
+      return
+    }
+  },
+
+  // 请求豆瓣数据
+  getData: function (start) {
     var that = this;
 
+    wx.showLoading({
+      title: '正在加载',
+    })
     wx.request({
-      url: 'https://douban.uieee.com/v2/movie/top250?count=10',
+      url: 'https://douban.uieee.com/v2/movie/top250?count=10&start=' + start,
       header: {
         'Content-Type': 'json'
       },
       success: function (res) {
-        var movie_list = that.movie_list || [];
+        var movie_list = that.data.movie_list || [];
 
         for (var i = 0; i < res.data.subjects.length; i++) {
           var movie = {}
@@ -56,11 +85,13 @@ Page({
           movie.movie_average = res.data.subjects[i].rating.average
           movie_list.push(movie)
         }
-        
+
+        wx.hideLoading()
         that.setData({
           movie_list,
-          complete_list: movie_list
-         })
+          complete_list: movie_list,
+          start
+        })
       }
     })
   },
