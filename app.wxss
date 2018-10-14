@@ -14,3 +14,9 @@ view {
   width: 100%;
   white-space:nowrap;
 }
+
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
