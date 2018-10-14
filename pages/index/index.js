@@ -9,6 +9,7 @@ Page({
     ],
     select_genres: '全部',
     movie_list: [],
+    complete_list: [],
     date_list: [
       { week: '日', date: '24', month: '6', year: '2018' },
       { week: '一', date: '25', month: '6', year: '2018' },
@@ -38,7 +39,6 @@ Page({
   onLoad() {
     var that = this;
 
-    // 从豆瓣接口请求数据
     wx.request({
       url: 'https://douban.uieee.com/v2/movie/top250?count=10',
       header: {
@@ -57,15 +57,33 @@ Page({
           movie_list.push(movie)
         }
         
-        that.setData({ movie_list })
+        that.setData({
+          movie_list,
+          complete_list: movie_list
+         })
       }
     })
   },
 
   // 选择类型
   bindGenreTap: function (e) {
+    var select_genres = e.currentTarget.dataset.id
+    var complete_list = this.data.complete_list
+    var search_list = []
+
+    if (select_genres == '全部') {
+      search_list = complete_list
+    } else {
+      for (var i = 0; i < complete_list.length; i++) {
+        if (complete_list[i].movie_genres.includes(select_genres)) {
+          search_list.push(complete_list[i])
+        }
+      }
+    }
+
     this.setData({
-      select_genres: e.currentTarget.dataset.id
+      movie_list: search_list,
+      select_genres
     })
   },
 
