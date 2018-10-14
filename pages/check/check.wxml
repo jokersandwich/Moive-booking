@@ -5,20 +5,20 @@
       <view class='info'>
         <view class='info-row'>
           <view class='info-label'>电影院</view>
-          <view class='info-text'>万达</view>
+          <view class='info-text'>{{ booking_data.select_theater.title }}</view>
         </view>
         <view class='info-row'>
           <view class='col col-4'>
             <view class='info-label'>日期</view>
-            <view class='info-text'>6月25日（周一）</view>
+            <view class='info-text'>{{ booking_data.select_date.month }}月{{ booking_data.select_date.date }}日（周{{ booking_data.select_date.week }}）</view>
           </view>
           <view class='col col-3'>
             <view class='info-label'>开始时间</view>
-            <view class='info-text'>01:20 pm</view>
+            <view class='info-text'>{{ booking_data.select_time }}</view>
           </view>
           <view class='col col-3'>
             <view class='info-label'>结束时间</view>
-            <view class='info-text'>03:20 pm</view>
+            <view class='info-text'>{{ booking_data.end_time }}</view>
           </view>
         </view>
         <view class='info-row'>
@@ -28,11 +28,11 @@
           </view>
           <view class='col col-3'>
             <view class='info-label'>排数</view>
-            <view class='info-text'>D</view>
+            <view class='info-text'>{{ booking_data.selected_row }}</view>
           </view>
           <view class='col col-3'>
             <view class='info-label'>座号</view>
-            <view class='info-text'>D4, D5, D6</view>
+            <view class='info-text'>{{ booking_data.selected_seats }}</view>
           </view>
         </view>
       </view>
@@ -45,7 +45,7 @@
           </view>
           <view class='col col-3'>
             <view class='info-label'>价格</view>
-            <view class='info-text'>￥35.00</view>
+            <view class='info-text'>$ 9.75</view>
           </view>
         </view>
       </view>

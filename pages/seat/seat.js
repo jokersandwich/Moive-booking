@@ -23,7 +23,6 @@ Page({
       key: 'movie_data',
       success: function(res) {
         res.data.movie_src = res.data.movie_src.replace(/s_ratio/, "m_ratio")
-        console.log(res.data)
         that.setData({
           movie_data: res.data
         })
@@ -59,11 +58,22 @@ Page({
         [prop]: null
       })
     }
-    
-    console.log(this.data.selected_seats)
   },
 
+  // 预定
   bindFooterTap: function(e) {
+    var booking_data = this.data.booking_data
+    var selected_seats = this.data.selected_seats
+    var seats = []
+    
+    for (var prop in selected_seats) {
+      if (selected_seats[prop] == 'selected') {
+        seats.push(prop)
+      }
+    }
+
+    booking_data.selected_seats = seats
+    wx.setStorage({ key: 'booking_data', data: booking_data })
     wx.navigateTo({
       url: '/pages/check/check',
     })
