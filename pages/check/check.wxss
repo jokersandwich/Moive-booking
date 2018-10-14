@@ -7,10 +7,6 @@
   height: 100%;
 }
 
-.wrap {
-  padding-top: 20%;
-}
-
 .info {
   margin: 0 48rpx;
   font-size: 24rpx;

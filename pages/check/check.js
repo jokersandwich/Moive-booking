@@ -6,7 +6,8 @@ Page({
    */
   data: {
     movie_data: {},
-    booking_data: {}
+    booking_data: {},
+    padding_top: '100rpx'
   },
 
   /**
@@ -14,6 +15,14 @@ Page({
    */
   onLoad: function (options) {
     var that = this
+
+    wx.getSystemInfo({
+      success: function(res) {
+        var padding_top = that.data.padding_top
+        padding_top = (res.windowHeight - 425 - 54) / 2 + 'px'
+        that.setData({ padding_top })
+      },
+    })
 
     wx.getStorage({
       key: 'movie_data',
@@ -84,7 +93,7 @@ Page({
       wx.showToast({
         title: '预定成功',
       })
-    }, 1500)
+    }, 1000)
   },
 
   /**
