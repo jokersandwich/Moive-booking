@@ -14,7 +14,4 @@
 
 ## 效果图
 
-<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/0.jpg" width="200" style="display: inline-block">
-<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/1.jpg" width="200" style="display: inline-block">
-<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/2.jpg" width="200" style="display: inline-block">
-<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/3.jpg" width="200" style="display: inline-block">
+<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/rendering.png" width="800">
