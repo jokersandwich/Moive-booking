@@ -18,6 +18,6 @@
 
 ## 预览
 
-已经发布，可以扫描二维码打开小程序中体验。
+小程序已经发布，可以扫描二维码体验。
 
 <img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/qrcode.jpg">
