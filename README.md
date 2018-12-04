@@ -6,7 +6,7 @@
 
 设计原图来自Uplabs [@Ayush Jangra](https://www.uplabs.com/ayushjangra)
 
-![preview](https://assets.materialup.com/uploads/82ef2c7c-7477-43f2-9714-dcec1f72eb33/preview.png)
+<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/preview.png" width="600">
 
 ## 接口
 
@@ -14,10 +14,7 @@
 
 ## 效果图
 
-![rendering_1]()
-
-![rendering_2]()
-
-![rendering_3]()
-
-![rendering_4]()
+<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/0.jpg" width="200" style="display: inline-block">
+<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/1.jpg" width="200" style="display: inline-block">
+<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/2.jpg" width="200" style="display: inline-block">
+<img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/3.jpg" width="200" style="display: inline-block">
