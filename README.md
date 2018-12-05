@@ -21,5 +21,3 @@
 小程序已经发布，可以扫描二维码体验。
 
 <img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/qrcode.jpg">
-
-（接口使用次数有限，为了节约接口，只有在【全部】分类中可以下翻更新数据，所以数据较少的时候，有的分类中没有电影，在【全部】分类中多更新就会出现）
