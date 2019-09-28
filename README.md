@@ -6,9 +6,9 @@
 
 这是一个简单的上手项目，用于熟悉小程序基本用法。
 
-豆瓣电影接口来自Github社区 [@zec](https://github.com/zce)。
-
 设计图来自Uplabs社区 [@Ayush Jangra](https://www.uplabs.com/ayushjangra)。
+
+豆瓣电影接口来自Github社区 [@zec](https://github.com/zce)。
 
 <img src="https://github.com/jokersandwich/Moive-booking/blob/master/image/readme/preview.png" width="560">
 
